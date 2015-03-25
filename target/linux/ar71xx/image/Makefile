@@ -1075,7 +1075,7 @@ $(eval $(call SingleProfile,AthLzma,64k,AP136_020,ap136-020,AP136-020,ttyS0,1152
 $(eval $(call SingleProfile,AthLzma,64k,BXU2000N2,bxu2000n-2-a1,BXU2000n-2-A1,ttyS0,115200,$$(bxu2000n2_mtdlayout),RKuImage))
 $(eval $(call SingleProfile,AthLzma,64k,CAP4200AG,cap4200ag,CAP4200AG,ttyS0,115200,$$(cap4200ag_mtdlayout),KRuImage))
 $(eval $(call SingleProfile,AthLzma,64k,DB120,db120,DB120,ttyS0,115200,$$(db120_mtdlayout),RKuImage))
-$(eval $(call SingleProfile,AthLzma,64k,DRAGINO2,dragino2,DRAGINO2,ttyATH0,115200,$$(dragino2_mtdlayout),KRuImage,65536))
+$(eval $(call SingleProfile,AthLzma,64k,DRAGINO2,dragino2,DRAGINO2,null,115200,$$(dragino2_mtdlayout),KRuImage,65536))
 $(eval $(call SingleProfile,AthLzma,64k,EWDORINAP,ew-dorin,EW-DORIN,ttyATH0,115200,$$(ew-dorin_mtdlayout_4M),KRuImage,65536))
 $(eval $(call SingleProfile,AthLzma,64k,EWDORINRT,ew-dorin-router,EW-DORIN-ROUTER,ttyATH0,115200,$$(ew-dorin_mtdlayout_4M),KRuImage,65536))
 $(eval $(call SingleProfile,AthLzma,64k,EWDORIN16M,ew-dorin-16M,EW-DORIN,ttyATH0,115200,$$(ew-dorin_mtdlayout_16M),KRuImage,65536))
