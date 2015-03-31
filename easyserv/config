@@ -1422,6 +1422,11 @@ CONFIG_PACKAGE_adminweb=y
 CONFIG_PACKAGE_base-config=y
 
 #
+# Applications
+#
+CONFIG_PACKAGE_hplink=y
+
+#
 # Emulators
 #
 
