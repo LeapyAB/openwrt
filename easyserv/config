@@ -2302,7 +2302,7 @@ CONFIG_PACKAGE_libblobmsg-json=y
 # CONFIG_PACKAGE_libboblight is not set
 # CONFIG_PACKAGE_libbz2 is not set
 CONFIG_PACKAGE_libcap=y
-# CONFIG_PACKAGE_libcares is not set
+CONFIG_PACKAGE_libcares=m
 # CONFIG_PACKAGE_libcelt is not set
 # CONFIG_PACKAGE_libcharset is not set
 # CONFIG_PACKAGE_libcli is not set
@@ -2432,7 +2432,7 @@ CONFIG_PACKAGE_libjson-c=y
 # CONFIG_PACKAGE_libmms is not set
 # CONFIG_PACKAGE_libmnl is not set
 # CONFIG_PACKAGE_libmodbus is not set
-# CONFIG_PACKAGE_libmosquitto is not set
+CONFIG_PACKAGE_libmosquitto=m
 # CONFIG_PACKAGE_libmosquitto-nossl is not set
 # CONFIG_PACKAGE_libmount is not set
 # CONFIG_PACKAGE_libmpcdec is not set
@@ -2442,7 +2442,7 @@ CONFIG_PACKAGE_libjson-c=y
 # CONFIG_PACKAGE_libmysqlclient is not set
 # CONFIG_PACKAGE_libmysqlclient-r is not set
 # CONFIG_PACKAGE_libnatpmp is not set
-# CONFIG_PACKAGE_libncurses is not set
+CONFIG_PACKAGE_libncurses=m
 # CONFIG_PACKAGE_libncursesw is not set
 # CONFIG_PACKAGE_libneon is not set
 # CONFIG_PACKAGE_libnet0 is not set
@@ -2473,7 +2473,12 @@ CONFIG_PACKAGE_libnl-tiny=y
 # CONFIG_PACKAGE_libpam is not set
 # CONFIG_PACKAGE_libpam-google-authenticator is not set
 # CONFIG_PACKAGE_libpar2 is not set
-# CONFIG_PACKAGE_libpcap is not set
+CONFIG_PACKAGE_libpcap=m
+
+#
+# Configuration
+#
+# CONFIG_PCAP_HAS_USB is not set
 CONFIG_PACKAGE_libpcre=y
 # CONFIG_PACKAGE_libpcrecpp is not set
 # CONFIG_PACKAGE_libpcsclite is not set
@@ -2567,7 +2572,7 @@ CONFIG_PACKAGE_libustream-openssl=y
 # CONFIG_PACKAGE_st2205tool is not set
 # CONFIG_PACKAGE_taglib is not set
 # CONFIG_PACKAGE_taglibc is not set
-# CONFIG_PACKAGE_terminfo is not set
+CONFIG_PACKAGE_terminfo=m
 # CONFIG_PACKAGE_uclibcxx is not set
 # CONFIG_PACKAGE_ustl is not set
 # CONFIG_PACKAGE_wt is not set
@@ -3554,8 +3559,8 @@ CONFIG_PACKAGE_iw=y
 # CONFIG_PACKAGE_mgen is not set
 # CONFIG_PACKAGE_mii-tool is not set
 # CONFIG_PACKAGE_mini-snmpd is not set
-# CONFIG_PACKAGE_mosquitto is not set
-# CONFIG_PACKAGE_mosquitto-client is not set
+CONFIG_PACKAGE_mosquitto=m
+CONFIG_PACKAGE_mosquitto-client=m
 # CONFIG_PACKAGE_mosquitto-client-nossl is not set
 # CONFIG_PACKAGE_mosquitto-nossl is not set
 # CONFIG_PACKAGE_mrtg is not set
@@ -3575,7 +3580,7 @@ CONFIG_PACKAGE_iw=y
 # CONFIG_PACKAGE_net-tools-plipconfig is not set
 # CONFIG_PACKAGE_net-tools-rarp is not set
 # CONFIG_PACKAGE_net-tools-slattach is not set
-# CONFIG_PACKAGE_netcat is not set
+CONFIG_PACKAGE_netcat=m
 # CONFIG_PACKAGE_netdiscover is not set
 # CONFIG_PACKAGE_netdiscover-to-devinfo is not set
 # CONFIG_PACKAGE_netio is not set
@@ -3647,7 +3652,7 @@ CONFIG_PACKAGE_ppp-mod-pppoe=y
 # CONFIG_PACKAGE_stunnel is not set
 # CONFIG_PACKAGE_synce-dccm is not set
 # CONFIG_PACKAGE_tayga is not set
-# CONFIG_PACKAGE_tcpdump is not set
+CONFIG_PACKAGE_tcpdump=m
 # CONFIG_PACKAGE_tcpdump-mini is not set
 # CONFIG_PACKAGE_tcptraceroute is not set
 # CONFIG_PACKAGE_tctool is not set
@@ -3755,7 +3760,7 @@ CONFIG_PACKAGE_wpad-mini=y
 #
 # CONFIG_PACKAGE_joe is not set
 # CONFIG_PACKAGE_mg is not set
-# CONFIG_PACKAGE_nano is not set
+CONFIG_PACKAGE_nano=m
 # CONFIG_PACKAGE_vim is not set
 # CONFIG_PACKAGE_vim-full is not set
 # CONFIG_PACKAGE_vim-help is not set
