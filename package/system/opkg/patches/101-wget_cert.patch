@@ -12,7 +12,6 @@
        argv[i++] = "-q";
 +      argv[i++] = "--private-key=/etc/ssl/certs/egwclient.key";
 +      argv[i++] = "--certificate=/etc/ssl/certs/egwclient.crt";
-+      argv[i++] = "--no-check-certificate"; 
 +                  
        if (conf->http_proxy || conf->ftp_proxy) {
  	argv[i++] = "-Y";
