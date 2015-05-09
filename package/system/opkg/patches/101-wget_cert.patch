@@ -1,6 +1,6 @@
 --- a/libopkg/opkg_download.c
 +++ b/libopkg/opkg_download.c
-@@ -157,11 +157,15 @@ opkg_download(const char *src, const cha
+@@ -157,11 +157,14 @@ opkg_download(const char *src, const cha
  #else
      {
        int res;
@@ -12,8 +12,7 @@
        argv[i++] = "-q";
 +      argv[i++] = "--private-key=/etc/ssl/certs/egwclient.key";
 +      argv[i++] = "--certificate=/etc/ssl/certs/egwclient.crt";
-+      argv[i++] = "--no-check-certificate"; 
-+                  
++
        if (conf->http_proxy || conf->ftp_proxy) {
  	argv[i++] = "-Y";
  	argv[i++] = "on";
