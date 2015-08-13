@@ -1307,28 +1307,7 @@ CONFIG_PACKAGE_ubox=y
 CONFIG_PACKAGE_ubus=y
 CONFIG_PACKAGE_ubusd=y
 CONFIG_PACKAGE_uci=y
-CONFIG_PACKAGE_udev=y
-
-#
-# Configuration
-#
-# CONFIG_UDEV_DISABLE_LOGGING is not set
-# CONFIG_UDEV_ENABLE_DEBUG is not set
-CONFIG_UDEV_EXTRA_accelerometer=y
-CONFIG_UDEV_EXTRA_ata_id=y
-CONFIG_UDEV_EXTRA_cdrom_id=y
-# CONFIG_UDEV_EXTRA_collect is not set
-# CONFIG_UDEV_EXTRA_edd_id is not set
-# CONFIG_UDEV_EXTRA_firmware is not set
-# CONFIG_UDEV_EXTRA_floppy is not set
-CONFIG_UDEV_EXTRA_input_id=y
-CONFIG_UDEV_EXTRA_mtd_probe=y
-CONFIG_UDEV_EXTRA_path_id=y
-CONFIG_UDEV_EXTRA_qemu=y
-CONFIG_UDEV_EXTRA_rule_generator=y
-CONFIG_UDEV_EXTRA_scsi_id=y
-CONFIG_UDEV_EXTRA_usb_id=y
-CONFIG_UDEV_EXTRA_v4l_id=y
+# CONFIG_PACKAGE_udev is not set
 CONFIG_PACKAGE_wireless-tools=y
 # CONFIG_PACKAGE_zram-swap is not set
 
@@ -1579,7 +1558,7 @@ CONFIG_PACKAGE_kmod-ledtrig-usbdev=y
 #
 # CONFIG_PACKAGE_kmod-lib-cordic is not set
 CONFIG_PACKAGE_kmod-lib-crc-ccitt=y
-CONFIG_PACKAGE_kmod-lib-crc-itu-t=m
+CONFIG_PACKAGE_kmod-lib-crc-itu-t=y
 CONFIG_PACKAGE_kmod-lib-crc16=y
 # CONFIG_PACKAGE_kmod-lib-crc32c is not set
 # CONFIG_PACKAGE_kmod-lib-crc7 is not set
@@ -1969,12 +1948,12 @@ CONFIG_PACKAGE_kmod-rt2500-usb=m
 CONFIG_PACKAGE_kmod-rt2800-lib=m
 # CONFIG_PACKAGE_kmod-rt2800-pci is not set
 CONFIG_PACKAGE_kmod-rt2800-usb=m
-CONFIG_PACKAGE_kmod-rt2x00-lib=m
+CONFIG_PACKAGE_kmod-rt2x00-lib=y
 # CONFIG_PACKAGE_RT2X00_LIB_DEBUGFS is not set
 # CONFIG_PACKAGE_RT2X00_DEBUG is not set
-CONFIG_PACKAGE_kmod-rt2x00-usb=m
+CONFIG_PACKAGE_kmod-rt2x00-usb=y
 # CONFIG_PACKAGE_kmod-rt61-pci is not set
-CONFIG_PACKAGE_kmod-rt73-usb=m
+CONFIG_PACKAGE_kmod-rt73-usb=y
 # CONFIG_PACKAGE_kmod-rtl8180 is not set
 CONFIG_PACKAGE_kmod-rtl8187=y
 CONFIG_PACKAGE_kmod-rtl8192c-common=y
@@ -3344,6 +3323,7 @@ CONFIG_PACKAGE_ntpd=y
 # CONFIG_PACKAGE_strongswan-mod-smp is not set
 # CONFIG_PACKAGE_strongswan-mod-socket-default is not set
 # CONFIG_PACKAGE_strongswan-mod-socket-dynamic is not set
+# CONFIG_PACKAGE_strongswan-mod-sql is not set
 # CONFIG_PACKAGE_strongswan-mod-sqlite is not set
 # CONFIG_PACKAGE_strongswan-mod-stroke is not set
 # CONFIG_PACKAGE_strongswan-mod-test-vectors is not set
@@ -3385,6 +3365,7 @@ CONFIG_PACKAGE_ntpd=y
 # CONFIG_PACKAGE_dansguardian is not set
 # CONFIG_PACKAGE_gatling is not set
 # CONFIG_PACKAGE_haproxy is not set
+# CONFIG_PACKAGE_haproxy-nossl is not set
 # CONFIG_PACKAGE_hiawatha is not set
 # CONFIG_PACKAGE_lighttpd is not set
 # CONFIG_PACKAGE_mini-httpd is not set
