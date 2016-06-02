@@ -2096,6 +2096,7 @@ CONFIG_PACKAGE_php5-mod-json=y
 # CONFIG_PACKAGE_mako is not set
 CONFIG_PACKAGE_org.eclipse.paho.mqtt.python=y
 # CONFIG_PACKAGE_pyclips is not set
+CONFIG_PACKAGE_pymodbus=y
 # CONFIG_PACKAGE_pyopenssl is not set
 # CONFIG_PACKAGE_pyrrd is not set
 CONFIG_PACKAGE_pyserial=y
