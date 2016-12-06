@@ -1,0 +1,44 @@
+--- a/drivers/usb/serial/option.c
++++ b/drivers/usb/serial/option.c
+@@ -234,6 +234,9 @@ static void option_instat_callback(struc
+ 
+ #define QUALCOMM_VENDOR_ID			0x05C6
+ 
++/* Quectel products */
++#define QUECTEL_PRODUCT_UC15			0x9090
++
+ #define CMOTECH_VENDOR_ID			0x16d8
+ #define CMOTECH_PRODUCT_6001			0x6001
+ #define CMOTECH_PRODUCT_CMU_300			0x6002
+@@ -1073,7 +1076,8 @@ static const struct usb_device_id option
+ 	{ USB_DEVICE(QUALCOMM_VENDOR_ID, 0x6613)}, /* Onda H600/ZTE MF330 */
+ 	{ USB_DEVICE(QUALCOMM_VENDOR_ID, 0x0023)}, /* ONYX 3G device */
+ 	{ USB_DEVICE(QUALCOMM_VENDOR_ID, 0x9000)}, /* SIMCom SIM5218 */
+-	{ USB_DEVICE(CMOTECH_VENDOR_ID, CMOTECH_PRODUCT_6001) },
++	{ USB_DEVICE(QUALCOMM_VENDOR_ID, QUECTEL_PRODUCT_UC15)},
++ 	{ USB_DEVICE(CMOTECH_VENDOR_ID, CMOTECH_PRODUCT_6001) },
+ 	{ USB_DEVICE(CMOTECH_VENDOR_ID, CMOTECH_PRODUCT_CMU_300) },
+ 	{ USB_DEVICE(CMOTECH_VENDOR_ID, CMOTECH_PRODUCT_6003),
+ 	  .driver_info = (kernel_ulong_t)&net_intf0_blacklist },
+@@ -1760,6 +1764,7 @@ static struct usb_serial_driver option_1
+ 	.suspend           = usb_wwan_suspend,
+ 	.resume            = usb_wwan_resume,
+ #endif
++	.reset_resume      = usb_wwan_resume,
+ };
+ 
+ static struct usb_serial_driver * const serial_drivers[] = {
+--- a/drivers/usb/serial/usb_wwan.c
++++ b/drivers/usb/serial/usb_wwan.c
+@@ -492,6 +492,11 @@ static struct urb *usb_wwan_setup_urb(st
+ 			  usb_sndbulkpipe(serial->dev, endpoint) | dir,
+ 			  buf, len, callback, ctx);
+ 
++	if (dir == USB_DIR_OUT) {
++		struct usb_device_descriptor *desc = &serial->dev->descriptor;
++		if (desc->idVendor == 0x05C6 && (desc->idProduct == 0x9003 || desc->idProduct == 0x9090 || desc->idProduct == 0x9215))
++			urb->transfer_flags |= URB_ZERO_PACKET;
++	}
+ 	return urb;
+ }
+ 
