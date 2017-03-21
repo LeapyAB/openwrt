@@ -14,7 +14,7 @@ ln -s feeds/easyservgw/base-config/files files
 # Copy easyservconfig into the build-dir
 cp easyserv/config .config
 
-make defconfig
 
-make -j8
+
+
   
